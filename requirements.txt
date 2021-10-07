@@ -1,0 +1,8 @@
+backoff>=1.11.1
+beautifulsoup4>=4.10.0
+deckar01-ratelimit>=3.0.2
+langdetect>=1.0.9
+lxml>=4.6.4
+tldextract>=3.1.2
+requests>=2.26.0
+urllib3=1.25.11
