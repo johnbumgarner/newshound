@@ -5,9 +5,9 @@ The table below lists these news sources.  This table will be periodically updat
 </p>
 
 
-<b>Last Updated: 10.18.2021</b>
+<b>Last Updated: 11.20.2021</b>
 
-<b>Last Tested: 10.18.2021</b> 
+<b>Last Tested: 11.20.2021</b> 
 
 <br>
 </p>
@@ -17,8 +17,11 @@ The table below lists these news sources.  This table will be periodically updat
 | ----------------------------------------- | -------------------------------- | ----------- |
 | ABC (Australian Broadcasting Corporation) | www.abc.net.au                   | English     |
 | ABC News                                  | www.abcnews.go.com               | English     |
+| Alarabiya                                 | www.alarabiya.net                | Arabic.     |
 | Amar Ujala                                | www.amarujala.com                | Hindi       |
+| Asahi Shimbun                             | www.asahi.com                    | Japanese    |
 | Associated Press                          | www.apnews.com                   | English     |
+| Atlantic Council                          | www.atlanticcouncil.org          | English     |
 | BBC                                       | www.bbc.com                      | English     |
 | Business Standard                         | www.business-standard.com        | English     |
 | Canadian Broadcasting Corporation         | www.cbc.ca                       | English     |
@@ -53,7 +56,9 @@ The table below lists these news sources.  This table will be periodically updat
 | MarketWatch                               | www.marketwatch.com              | English     |
 | Mercury News                              | www.mercurynews.com              | English     |
 | Miami Herald                              | www.miamiherald.com              | English     |
+| National Review                           | www.nationalreview.com           | English     |
 | NBC News                                  | www.nbcnews.com                  | English     |
+| New Delhi Television Ltd (NDTV)           | www.ndtv.com                     | English     |
 | Newsweek                                  | www.newsweek.com                 | English     |
 | Nikkei                                    | asia.nikkei.com                  | English     |
 | People's Daily                            | www.people.com.cn                | Chinese     |
@@ -76,12 +81,18 @@ The table below lists these news sources.  This table will be periodically updat
 | The Times of India                        | www.timesofindia.indiatimes.com  | English     |
 | USA Today                                 | www.usatoday.com                 | English     |
 | Washington Times                          | www.washingtontimes.com          | English     |
+| World Economic Forum                      | www.weforum.org                  | English     |
+| World Economic Forum - Chinese            | cn.weforum.org                   | Chinese     |
+| World Economic Forum - French             | fr.weforum.org                   | French      |
+| World Economic Forum - Spanish            | es.weforum.org                   | Spanish     |
+| World Economic Forum - Japanese           | jp.weforum.org                   | Japanese     |
+| Yahoo News                                | news.yahoo.com                   | English     |
 | Yomiuri Shimbun                           | www.yomiuri.co.jp                | Japanese    |
 
 
 <br> 
 <p align="justify"> 
-As of 10.18.2021 each one of the news sources listed above can be queried for the following data elements related to an individual article: 
+As of 11.20.2021 each one of the news sources listed above can be queried for the following data elements related to an individual article: 
 
 - Title 
 - Description/Summary
@@ -94,3 +105,9 @@ As of 10.18.2021 each one of the news sources listed above can be queried for th
 - Top Image
 
 </p>
+
+<p align="justify"> 
+<b>SPECIAL NOTE:</b> Some news sources will be missing certain data elements, because these elements are not available in the source's navigational structure. The most common element missing is <i>Keywords</i> and the second most common is <i>Modified Date</i>.  The maintainers of <i>NewsHound</i>  are exploring methods to extract keywords from an article's title and description when these words are not provided by a news source.
+  
+</p>
+  
