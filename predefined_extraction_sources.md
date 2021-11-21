@@ -35,6 +35,7 @@ The table below lists these news sources.  This table will be periodically updat
 | Dainik Bhaskar                            | www.bhaskar.com                  | Hindi       |
 | Dainik Jagran                             | www.jagran.com                   | Hindi       |
 | Daily Mail                                | www.dailymail.co.uk              | English     |
+| Der Spiegel                               | www.spiegel.de                   | German      |
 | Des Moines Register                       | www.desmoinesregister.com        | English     |
 | Forbes                                    | www.forbes.com                   | English     |
 | Fox Business                              | www.foxbusiness.com              | English     |
