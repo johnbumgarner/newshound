@@ -44,7 +44,7 @@ The table below lists these news sources.  This table will be periodically updat
 | Jahan News                                | www.jahannews.com                | Persian     |
 | Japan Times                               | www.japantimes.co.jp             | English     |
 | Jerusalem Post                            | www.jpost.com                    | English     |
-| Khao Sod                                  | www.khaosod.co.th                | Thai        |
+| Khaosod                                   | www.khaosod.co.th                | Thai        |
 | Korea Times                               | www.koreatimes.com               | Korean      |
 | Korea Times                               | www.koreatimes.co.kr             | English     |
 | La Repubblica                             | www.repubblica.it                | Italian     |
@@ -86,7 +86,7 @@ The table below lists these news sources.  This table will be periodically updat
 | World Economic Forum - Chinese            | cn.weforum.org                   | Chinese     |
 | World Economic Forum - French             | fr.weforum.org                   | French      |
 | World Economic Forum - Spanish            | es.weforum.org                   | Spanish     |
-| World Economic Forum - Japanese           | jp.weforum.org                   | Japanese     |
+| World Economic Forum - Japanese           | jp.weforum.org                   | Japanese    |
 | Yahoo News                                | news.yahoo.com                   | English     |
 | Yomiuri Shimbun                           | www.yomiuri.co.jp                | Japanese    |
 
