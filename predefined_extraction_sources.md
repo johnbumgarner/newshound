@@ -37,6 +37,9 @@ The table below lists these news sources.  This table will be periodically updat
 | Daily Mail                                | www.dailymail.co.uk              | English     |
 | Der Spiegel                               | www.spiegel.de                   | German      |
 | Des Moines Register                       | www.desmoinesregister.com        | English     |
+| El Nuevo Dia                              | www.elnuevodia.com               | Spanish     |
+| El Mundo                                  | www.elmundo.es                   | Spanish     |
+| El Pais                                   | elpais.com                       | Spanish     |
 | Forbes                                    | www.forbes.com                   | English     |
 | Fox Business                              | www.foxbusiness.com              | English     |
 | Fox News                                  | www.foxnews.com                  | English     |
@@ -47,6 +50,7 @@ The table below lists these news sources.  This table will be periodically updat
 | Khaosod                                   | www.khaosod.co.th                | Thai        |
 | Korea Times                               | www.koreatimes.com               | Korean      |
 | Korea Times                               | www.koreatimes.co.kr             | English     |
+| La Opinión                                | laopinion.com                    | Spanish     |              
 | La Repubblica                             | www.repubblica.it                | Italian     |
 | Le Monde                                  | www.lemonde.fr                   | French      |
 | Le Parisien                               | www.leparisien.fr                | French      |
