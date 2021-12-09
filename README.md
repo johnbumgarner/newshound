@@ -53,7 +53,7 @@ from newshound import Article
 article = Article(source_url='https://www.cnn.com/2021/12/08/europe/germany-covid-europe-intl/index.html')
 ```
 
-Here is how an end-user would obtain the Publish date and last modified date of an article. Please note that some articles do not have a modified date, so <i>NewsHound</i> will provide this text: "article modified date not found." 
+Here is how an end-user would obtain the published date and last modified date of an article. Please note that some articles do not have a modified date, so <i>NewsHound</i> will provide this text: "article modified date not found." 
 
 ```python 
 from newshound import Article
@@ -235,7 +235,7 @@ When a ratelimit is trigger a warning message is written to both the console and
 ```python 
 from newshound import Article
 
-article = Article(source_url='https://www.cnn.com/world/live-news/covid-variant-omicron-11-29-21/h_ba3ad8e4fe31cd243ef13c4526ef4fbd', 
+article = Article(source_url='https://www.cnn.com/2021/12/08/europe/germany-covid-europe-intl/index.html', 
                   max_number_of_requests=30, 
                   rate_limit_timeout_period=60)
 
@@ -254,7 +254,7 @@ proxies_example = {
     "https": "your https proxy"  # example: https://128.230.60.178:3128
 }
 
-article = Article(source_url='https://www.cnn.com/world/live-news/covid-variant-omicron-11-29-21/h_ba3ad8e4fe31cd243ef13c4526ef4fbd', 
+article = Article(source_url='https://www.cnn.com/2021/12/08/europe/germany-covid-europe-intl/index.html', 
                   proxies=proxies_example)
 ```
 <p align="justify">
@@ -273,7 +273,7 @@ from newshound import Article
 # output_format='dictionary'
 # output_format='dataframe'
 # output_format='json'
-article = Article(source_url='https://www.cnn.com/world/live-news/covid-variant-omicron-11-29-21/h_ba3ad8e4fe31cd243ef13c4526ef4fbd', 
+article = Article(source_url='https://www.cnn.com/2021/12/08/europe/germany-covid-europe-intl/index.html', 
                   output_format='dictionary')
 
 ```
