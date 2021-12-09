@@ -34,7 +34,162 @@ pip3 install newshound
 
 # General Package Utilization
 
-<b>COMING SOON</b>
+<i>NewsHound</i> usage is slightly different that other Python Packages, such as <a href="https://github.com/codelucas/newspaper">Newspaper3k</a>.  The latter package requires an end-user to call the functions <i>download()</i> and <i>parse()</i> prior to calling a function like <i>title</i>.  <i>Newspaper3k</i> also required an end-user to called the Class Config() to pass variables (e.g., User-Agent) to <i>Python Requests</i>. <i>NewsHound</i> takes care of this basic housekeeping without user intervention.
+
+For example this is how an end-user would request data extraction for a single article using <i>NewsHound</i>.
+
+```python 
+from newshound import Article
+
+article = Article(source_url='https://www.cnn.com/2021/12/08/europe/germany-covid-europe-intl/index.html')
+```
+
+Here is how an end-user would obtain the Publish date and last modified date of an article. Please note that some articles do not have a modified date, so <i>NewsHound</i> will provide this text: "article modified date not found." 
+
+```python 
+from newshound import Article
+
+article = Article(source_url='https://www.cnn.com/2021/12/08/europe/germany-covid-europe-intl/index.html')
+
+print(article.published_date)
+2021-12-08T13:05:07Z
+
+print(article.modified_date)
+2021-12-08T15:12:44Z
+```
+
+Here is how to obtain the article's title.
+
+```python 
+from newshound import Article
+
+article = Article(source_url='https://www.cnn.com/2021/12/08/europe/germany-covid-europe-intl/index.html')
+
+print(article.title)
+germany records highest number of covid-19 deaths since february - cnn
+```
+
+Here is how to obtain an article's description.
+
+```python 
+from newshound import Article
+
+article = Article(source_url='https://www.cnn.com/2021/12/08/europe/germany-covid-europe-intl/index.html')
+
+print(article.description)
+Germany recorded its highest number of daily deaths from Covid-19 since February on Wednesday, as it struggles to bring a fourth wave of the pandemic under control.
+```
+
+Here is how to obtain the names of the individuals that wrote the article.
+
+```python 
+from newshound import Article
+
+article = Article(source_url='https://www.cnn.com/2021/12/08/europe/germany-covid-europe-intl/index.html')
+
+print(article.authors)
+['Laura Smith-Spark', 'Stephanie Halasz']
+```
+
+Here is how to obtain the language that the article was written in.
+
+```python 
+from newshound import Article
+
+article = Article(source_url='https://www.cnn.com/2021/12/08/europe/germany-covid-europe-intl/index.html')
+
+print(article.language)
+english(united states)
+```
+
+Here is how to find the published keywords associated with an article.
+
+```python 
+from newshound import Article
+
+article = Article(source_url='https://www.cnn.com/2021/12/08/europe/germany-covid-europe-intl/index.html')
+
+print(article.keywords)
+['europe', 'germany records highest number of covid-19 deaths since february - cnn']
+```
+
+Here is how to obtain the article's URL and the URL of the top image used in the article.
+
+```python 
+from newshound import Article
+
+article = Article(source_url='https://www.cnn.com/2021/12/08/europe/germany-covid-europe-intl/index.html')
+
+print(article.url)
+https://www.cnn.com/2021/12/08/europe/germany-covid-europe-intl/index.html
+
+print(article.top_image_url)
+https://cdn.cnn.com/cnnnext/dam/assets/211208054441-germany-hospital-coronavirus-patient-11-30-2021-super-tease.jpg
+```
+
+Here is how to obtain the textual content of the article. 
+
+```python 
+from newshound import Article
+
+article = Article(source_url='https://www.cnn.com/2021/12/08/europe/germany-covid-europe-intl/index.html')
+
+print(article.text)
+
+A total of 69,601 new infections were reported and an additional 527 people died in the past 24 hours, according to the Robert Koch Institute (RKI), the national disease and control center. That marked the highest Covid-19 daily death toll since February 18, when there were 534 fatalities.Germany's seven-day incidence rate dropped slightly, but remains high at 427 per 100,000 inhabitants. The country has recorded 104,047 deaths from Covid-19 in total since the outbreak of the pandemic.The grim news came on the day that Olaf Scholz was sworn in as Germany's Chancellor, replacing Angela Merkel at the helm of Europe's largest economy. The country's new health minister is Karl Lauterbach, an MP and prominent epidemiologist.Germany last week announced a nationwide lockdown for the unvaccinated, barring them from accessing all but the most essential businesses, such as supermarkets and pharmacies, as it battles to curb infections. The ban doesn't apply to those who have recently recovered from Covid-19.Its leaders also backed plans for mandatory vaccinations in the coming months, which, if voted through the German parliament, could take effect from February at the earliest.Many hospitals are struggling to cope with the increasing number of intensive care patients and German medics have warned that intensive care occupancy could soon exceed that seen during last winter's peak.The emergence of the fast-spreading Omicron coronavirus variant has heightened concerns in Germany as elsewhere.Researchers working in South Africa reported Tuesday that the Omicron variant partly escapes the protection offered by the Pfizer vaccine, although people who have been previously infected and then vaccinated are likely to be well protected. The research team cautioned that it was a small, preliminary study.If approved, Germany's vaccine mandate would follow in the footsteps of neighboring Austria, which also plans to make inoculations for eligible adults compulsory from February.Greece announced last week that vaccines would be mandatory for people aged over 60 from mid-January. Those refusing to do so would face 100 euro (US $113) fines for each passing month, the government said.The United Kingdom marked a year Wednesday since it became the world's first nation to begin vaccinating its citizens with a fully vetted and authorized Covid-19 shot.The UK government is under pressure from leading scientists to introduce tougher restrictions to try to limit infections amid rising case numbers. The seven-day rolling average on November 29 was over 45,000, the highest it's been since a peak around October 17.UK health officials are urging all those eligible to get vaccinated against Covid-19 and has accelerated its booster shot rollout, amid wide concern over the potential impact of the Omicron variant. Last week, the government reimposed the requirement to wear a face covering in shops and on public transport after a number of cases of the new variant were detected in the UK."We can conclude there is now community transmission across multiple regions of England," UK Health Secretary Sajid Javid said Monday of the Omicron variant.At the same time, the UK government is facing an uproar over reports of a staff Christmas party at Downing Street during last year's lockdown.
+
+```
+
+The extracted data elements can also be outputted in <i>JSON</i> or a <i>Pandas Dataframe</i>.  This is accomplished by using the variable <i>output_format</i>, which by default is set to <i>output_format='dictionary'</i>.  You have to call <i>article.all_elements</i> to obtain the requested output. 
+
+<b>JSON Output</b>
+
+```python 
+from newshound import Article
+
+article = Article(source_url='https://www.cnn.com/2021/12/08/europe/germany-covid-europe-intl/index.html', output_format='json')
+
+print(article.all_elements)
+
+{
+    "published_date": "2021-12-08T13:05:07Z",
+    "modified_date": "2021-12-08T15:12:44Z",
+    "language": "english (united states)",
+    "title": "Germany records highest number of Covid-19 deaths since February - CNN",
+    "description": "Germany recorded its highest number of daily deaths from Covid-19 since February on Wednesday, as it struggles to bring a fourth wave of the pandemic under control.",
+    "keywords": [
+        "europe",
+        "Germany records highest number of Covid-19 deaths since February - CNN"
+    ],
+    "categories": "europe",
+    "authors": [
+        "Laura Smith-Spark",
+        "Stephanie Halasz"
+    ],
+    "text": "A total of 69,601 new infections were reported and an additional 527 people died in the past 24 hours, according to the Robert Koch Institute (RKI), the national disease and control center. That marked the highest Covid-19 daily death toll since February 18, when there were 534 fatalities.Germany's seven-day incidence rate dropped slightly, but remains high at 427 per 100,000 inhabitants. The country has recorded 104,047 deaths from Covid-19 in total since the outbreak of the pandemic.The grim news came on the day that Olaf Scholz was sworn in as Germany's Chancellor, replacing Angela Merkel at the helm of Europe's largest economy. The country's new health minister is Karl Lauterbach, an MP and prominent epidemiologist.Germany last week announced a nationwide lockdown for the unvaccinated, barring them from accessing all but the most essential businesses, such as supermarkets and pharmacies, as it battles to curb infections. The ban doesn't apply to those who have recently recovered from Covid-19.Its leaders also backed plans for mandatory vaccinations in the coming months, which, if voted through the German parliament, could take effect from February at the earliest.Many hospitals are struggling to cope with the increasing number of intensive care patients and German medics have warned that intensive care occupancy could soon exceed that seen during last winter's peak.The emergence of the fast-spreading Omicron coronavirus variant has heightened concerns in Germany as elsewhere.Researchers working in South Africa reported Tuesday that the Omicron variant partly escapes the protection offered by the Pfizer vaccine, although people who have been previously infected and then vaccinated are likely to be well protected. The research team cautioned that it was a small, preliminary study.If approved, Germany's vaccine mandate would follow in the footsteps of neighboring Austria, which also plans to make inoculations for eligible adults compulsory from February.Greece announced last week that vaccines would be mandatory for people aged over 60 from mid-January. Those refusing to do so would face 100 euro (US $113) fines for each passing month, the government said.The United Kingdom marked a year Wednesday since it became the world's first nation to begin vaccinating its citizens with a fully vetted and authorized Covid-19 shot.The UK government is under pressure from leading scientists to introduce tougher restrictions to try to limit infections amid rising case numbers. The seven-day rolling average on November 29 was over 45,000, the highest it's been since a peak around October 17.UK health officials are urging all those eligible to get vaccinated against Covid-19 and has accelerated its booster shot rollout, amid wide concern over the potential impact of the Omicron variant. Last week, the government reimposed the requirement to wear a face covering in shops and on public transport after a number of cases of the new variant were detected in the UK.\"We can conclude there is now community transmission across multiple regions of England,\" UK Health Secretary Sajid Javid said Monday of the Omicron variant.At the same time, the UK government is facing an uproar over reports of a staff Christmas party at Downing Street during last year's lockdown.",
+    "url": "https://www.cnn.com/2021/12/08/europe/germany-covid-europe-intl/index.html",
+    "top_image": "https://cdn.cnn.com/cnnnext/dam/assets/211208054441-germany-hospital-coronavirus-patient-11-30-2021-super-tease.jpg"
+}
+
+```
+
+<b>Dataframe Output</b>
+
+```python 
+from newshound import Article
+
+article = Article(source_url='https://www.cnn.com/2021/12/08/europe/germany-covid-europe-intl/index.html', output_format='dataframe')
+
+print(article.all_elements)
+
+
+```
+
+
+
+
+    
+
 
 
 # Additional Features
