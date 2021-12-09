@@ -1,6 +1,15 @@
 # Currently under development.  BETA will be released soon.
 ########### ########### ########### ########### ########### 
 
+
+![PyPI](https://img.shields.io/pypi/v/newshound) &nbsp;
+![License: MIT](https://img.shields.io/github/license/johnbumgarner/newshound)&nbsp;
+![GitHub issues](https://img.shields.io/github/issues/johnbumgarner/newshound)&nbsp;
+![GitHub pull requests](https://img.shields.io/github/issues-pr/johnbumgarner/newshound)&nbsp;
+[![Downloads](https://static.pepy.tech/personalized-badge/newshound?period=total&units=international_system&left_color=grey&right_color=brightgreen&left_text=Total%20Downloads)](https://pepy.tech/project/newshound)&nbsp;
+
+<!-- [![wordhoard](https://snyk.io/advisor/python/newshound/badge.svg)](https://snyk.io/advisor/python/newshound)&nbsp; -->
+
 # Primary Use Case
 <p align="justify"> 
 Textual analysis is a broad term for various research methodologies used to qualitatively describe, interpret and understand text data. These methodologies are mainly used in academic research to analyze content related to media and communication studies, popular culture, sociology, and philosophy. Textual analysis allows researchers to quickly obtain relevant insights from unstructured data. All types of information can be gleaned from textual data, especially from social media posts or news articles. Some of this information includes the overall concept of the subtext, symbolism within the text, assumptions being made and potential relative value to a subject (e.g. data science). In some cases it is possible to deduce the relative historical and cultural context of a body of text using analysis techniques coupled with knowledge from different disciplines, like linguistics and semiotics.
@@ -182,14 +191,20 @@ article = Article(source_url='https://www.cnn.com/2021/12/08/europe/germany-covi
 
 print(article.all_elements)
 
+                                                                0
+published_date                               2021-12-08T13:05:07Z
+modified_date                                2021-12-08T15:12:44Z
+language                                  english (united states)
+title           Germany records highest number of Covid-19 dea...
+description     Germany recorded its highest number of daily d...
+keywords        [europe, Germany records highest number of Cov...
+categories                                                 europe
+authors                     [Laura Smith-Spark, Stephanie Halasz]
+text            A total of 69,601 new infections were reported...
+url             https://www.cnn.com/2021/12/08/europe/germany-...
+top_image       https://cdn.cnn.com/cnnnext/dam/assets/2112080...
 
 ```
-
-
-
-
-    
-
 
 
 # Additional Features
@@ -220,7 +235,7 @@ When a ratelimit is trigger a warning message is written to both the console and
 ```python 
 from newshound import Article
 
-article = Article(article_url='https://www.cnn.com/world/live-news/covid-variant-omicron-11-29-21/h_ba3ad8e4fe31cd243ef13c4526ef4fbd', 
+article = Article(source_url='https://www.cnn.com/world/live-news/covid-variant-omicron-11-29-21/h_ba3ad8e4fe31cd243ef13c4526ef4fbd', 
                   max_number_of_requests=30, 
                   rate_limit_timeout_period=60)
 
@@ -239,7 +254,7 @@ proxies_example = {
     "https": "your https proxy"  # example: https://128.230.60.178:3128
 }
 
-article = Article(article_url='https://www.cnn.com/world/live-news/covid-variant-omicron-11-29-21/h_ba3ad8e4fe31cd243ef13c4526ef4fbd', 
+article = Article(source_url='https://www.cnn.com/world/live-news/covid-variant-omicron-11-29-21/h_ba3ad8e4fe31cd243ef13c4526ef4fbd', 
                   proxies=proxies_example)
 ```
 <p align="justify">
@@ -249,7 +264,7 @@ There is a known bug in <i>urllib3</i> between versions 1.26.0 and 1.26.7, which
 ## Output Formatting
 
 <p align="justify">
-The default output of <i>NewsHound</i> is a <i>Python</i> Dictionary.  The output format can be changed to output the extraction results to JSON, Pandas DataFrame or HTML. The code example below shows how to change the formatting.  
+The default output of <i>NewsHound</i> is a <i>Python</i> Dictionary.  The output format can be changed to output the extraction results to <i>JSON</i> or <i>Pandas DataFrame</i>. The code example below shows how to change the formatting.  
 </p>
 
 ```python
@@ -258,8 +273,7 @@ from newshound import Article
 # output_format='dictionary'
 # output_format='dataframe'
 # output_format='json'
-# output_format='html'
-article = Article(article_url='https://www.cnn.com/world/live-news/covid-variant-omicron-11-29-21/h_ba3ad8e4fe31cd243ef13c4526ef4fbd', 
+article = Article(source_url='https://www.cnn.com/world/live-news/covid-variant-omicron-11-29-21/h_ba3ad8e4fe31cd243ef13c4526ef4fbd', 
                   output_format='dictionary')
 
 ```
@@ -283,11 +297,14 @@ This package has these core dependencies:
 1. <b>backoff</b>
 2. <b>BeautifulSoup</b>
 3. <b>deckar01-ratelimit</b>
-4. <b>langdetect</b>
-5. <b>lxml</b>
-6. <b>requests</b>
-7. <b>tldextract</b>
-8. <b>urllib3</b>
+4. <b>htmlmin</b>
+5. <b>langdetect</b>
+6. <b>lxml</b>
+7. <b>pandas</b>
+8. <b>numpy</b>
+9. <b>requests</b>
+10. <b>tldextract</b>
+11. <b>urllib3</b>
 </p>
 
 # Development
@@ -312,11 +329,13 @@ You can also contact me at [John Bumgarner](mailto:newshoundproject@gmail.com?su
    
 <p align="justify">
    
-The querying capabilities of this Python package is highly dependent on the navigational structure of each source in the query pool.  If a source modifies its navigational structure then extraction from that specific source will likely have some challenges. The maintainers of <i>NewsHound</i> will correct these navigational extraction issues when they are discovered in periodic testing or reported as an issue.  
+The querying capabilities of this Python package is highly dependent on the navigational structure of each source.  If a source modifies its navigational structure then extraction from that specific source will likely have some challenges. The maintainers of <i>NewsHound</i> will correct these navigational extraction issues when they are discovered in periodic testing or reported as an issue.  
 
 Some of the news sources located in the European Union have a General Data Protection Regulation (GDPR) warning.  For instance, the Die Zeit news site has an advertisement and GDPR tracking acknowledgement button, which requires the use of the Python library <i>selenium</i> coupled with <i>NewsHound</i> to extract article elements from this news source.  The maintainers of <i>NewsHound</i> are exploring options to generically acknowledge these warning messages.  
   
-News sources that require subscription services to access content is another limitation.  The maintainers of <i>NewsHound</i> are looking at ways to generically handle login to these news sites. 
+<i>Selenium</i> is also needed for those news sources that dynamically generate content using <i>JavaScript</i>.
+  
+News sources that require subscription services to access content is another limitation.  The maintainers of <i>NewsHound</i> are looking at ways to generically handle login to these news sites.
 
 The maintainers of <i>NewsHound</i> have developed this package with both targeted extraction for predefined news sites and generic extraction techniques for other sites.  The latter technique will make its best effort to extract content from an unknown news source.  
 </p>
