@@ -10,13 +10,9 @@
 
 <!-- [![wordhoard](https://snyk.io/advisor/python/newshound/badge.svg)](https://snyk.io/advisor/python/newshound)&nbsp; -->
 
-# Primary Use Case
-<p align="justify"> 
-Textual analysis is a broad term for various research methodologies used to qualitatively describe, interpret and understand text data. These methodologies are mainly used in academic research to analyze content related to media and communication studies, popular culture, sociology, and philosophy. Textual analysis allows researchers to quickly obtain relevant insights from unstructured data. All types of information can be gleaned from textual data, especially from social media posts or news articles. Some of this information includes the overall concept of the subtext, symbolism within the text, assumptions being made and potential relative value to a subject (e.g. data science). In some cases it is possible to deduce the relative historical and cultural context of a body of text using analysis techniques coupled with knowledge from different disciplines, like linguistics and semiotics.
+# Overview
 
-<i>NewsHound</i> was designed to assist researchers in these tasks by performing high quality news and article extraction for sources in multiple languages. For instance <i>NewsHound</i> allows you to scrape article content from <a href="https://www.bbc.com">the BBC</a> in English, the <a href="www.bhaskar.com">Dainik Bhaskar</a> in Hindi, the <a href="www.people.com.cn">People's Daily</a> in Chinese and the <a href=" www.khaosod.co.th">Khaosod</a> in Thai.
-  
-<i>NewsHound</i> is designed to scrape news sites for these common data elements:
+<i>NewsHound</i> is designed to scrape articles from news sites for these common data elements:
   
 - Title/Headline
 - Description/Summary
@@ -27,6 +23,33 @@ Textual analysis is a broad term for various research methodologies used to qual
 - Published Date
 - Modified Date
 - Top Image
+
+# Example
+If you use the default Newshound parser on the url for this [history.com article](https://www.history.com/this-day-in-history/red-sox-win-first-championship-since-1918) about the Red Sox 2004 World Series Win, you will get back a dictionary like the following. (See complete example response dictionary in [this gist](https://example.com))
+
+```
+[Dictionary here]
+```
+
+
+# Purpose
+<p align="justify"> 
+<i>NewsHound</i> was designed to perform high quality news and article extraction for sources in multiple languages. 
+
+For instance <i>NewsHound</i> cleanly parses article content from <a href="https://www.bbc.com">the BBC</a> in English, the <a href="www.bhaskar.com">Dainik Bhaskar</a> in Hindi, the <a href="www.people.com.cn">People's Daily</a> in Chinese and the <a href=" www.khaosod.co.th">Khaosod</a> in Thai.
+</p>
+
+# Primary Use Case
+<p align="justify"> 
+Textual analysis is a broad term for various research methodologies used to qualitatively describe, interpret and understand text data. 
+
+These methodologies are mainly used in academic research to analyze content related to media and communication studies, popular culture, sociology, and philosophy. 
+
+Textual analysis allows researchers to quickly obtain relevant insights from unstructured data. All types of information can be gleaned from textual data, especially from social media posts or news articles. 
+
+Some of this information includes the overall concept of the subtext, symbolism within the text, assumptions being made and potential relative value to a subject (e.g. data science). 
+
+In some cases it is possible to deduce the relative historical and cultural context of a body of text using analysis techniques coupled with knowledge from different disciplines, like linguistics and semiotics.
 </p>
 
 
