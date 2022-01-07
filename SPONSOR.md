@@ -4,18 +4,17 @@
 
 <p align="justify">
 
-Thank you in advance for considering sponsoring the Python project <i>NewsHound</i>. Your contributions will help with 
+Thank you in advance for considering sponsoring the <strong>NewsHound</strong> project. Your contributions will help with 
 the ongoing development and maintenance of this project.  
 
-This document outlines the current methods to sponsor the <i>NewsHound</i> project.  If you have any questions about sponsoring this project 
+This document outlines the current methods to sponsor the <strong>NewsHound</strong> project.  If you have any questions about sponsoring this project 
 please don't hesitate to reach out to me [here](mailto:newshoundproject@gmail.com?subject=[GitHub]%20newshound%20project%20sponsorship%20request).
 </p>
 
 ## Methods of Sponsorship
 
 <p align="justify">
-Currently there is only one way to sponsor the Python project <i>NewsHound</i>. This method is listed below, which includes additional information about the method. 
-Hopefully, this method works for you.  Additional support methods will be added in the future.  
+Currently there is only one way to sponsor the <strong>NewsHound</strong> project. This method is listed below, which includes additional information about the method. Hopefully, this method works for you.  Additional support methods will be added in the future.  
 </p>
 
 ### Method: Buy Me A Coffee
