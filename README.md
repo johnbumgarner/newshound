@@ -16,11 +16,11 @@
 ## Description
 
 <p align="justify"> 
-	<i>NewsHound</i> is a <i>Python 3</i> module that was designed to perform high quality news and article extraction for sources in multiple languages.
+	<strong>NewsHound</strong> is a <i>Python 3</i> module that was designed to perform high quality news and article extraction for sources in multiple languages.
 </p>
 
 <p align="justify"> 
-	For instance <i>NewsHound</i> cleanly parses article content from <a href="https://www.bbc.com">the BBC</a> in English, the <a href="https://www.bhaskar.com">Dainik Bhaskar</a> in Hindi, the <a href="https://www.people.com.cn">People's Daily</a> in Chinese, the <a href="https://www.manoramaonline.com">Malayala Manorama</a> in Malayalam and the <a href=" www.khaosod.co.th">Khaosod</a> in Thai.
+	For instance <strong>NewsHound</strong> cleanly parses article content from <a href="https://www.bbc.com">the BBC</a> in English, the <a href="https://www.bhaskar.com">Dainik Bhaskar</a> in Hindi, the <a href="https://www.people.com.cn">People's Daily</a> in Chinese, the <a href="https://www.manoramaonline.com">Malayala Manorama</a> in Malayalam and the <a href=" www.khaosod.co.th">Khaosod</a> in Thai.
 </p>
 
 <p align="justify"> 
@@ -48,7 +48,7 @@ These data elements are:
 ## Installation
 
 <p align="justify"> 
-  <i>NewsHound</i> requires <strong>Python >=3.6</strong>.  This package can be installed using <i>pip3</i>.
+  <strong>NewsHound</strong> requires <strong>Python >=3.6</strong>.  This package can be installed using <i>pip3</i>.
 </p>
 
 ```python
@@ -58,7 +58,7 @@ pip3 install newshound
 ## Usage and Documentation
 
 <p align="justify">
-  For detailed information on <i>NewsHound</i> please refer to the <a href="https://newshound.readthedocs.io/">documentation</a>.
+  For detailed information on <strong>NewsHound</strong> please refer to the <a href="https://newshound.readthedocs.io/">documentation</a>.
 
   - <a href="https://newshound.readthedocs.io/dependencies/">Package Dependencies</a>
 
@@ -68,7 +68,7 @@ pip3 install newshound
 ## Predefined Extraction
 
 <p align="justify">
-The maintainers of <i>NewsHound</i> have developed and tested multiple <a href="https://github.com/johnbumgarner/newshound/blob/master/predefined_extraction_sources.md">predefined extraction modules</a> for various news sources around the world.  These specific extractors were developed to ensure consistent and accurate parsing from the news sources being queried. Additional sources will be added periodically to this predefined extraction list.  
+The maintainers of <strong>NewsHound</strong> have developed and tested multiple <a href="https://github.com/johnbumgarner/newshound/blob/master/predefined_extraction_sources.md">predefined extraction modules</a> for various news sources around the world.  These specific extractors were developed to ensure consistent and accurate parsing from the news sources being queried. Additional sources will be added periodically to this predefined extraction list.  
 </p>
 
 
