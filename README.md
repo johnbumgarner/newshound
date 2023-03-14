@@ -6,7 +6,7 @@
 ---
 
 ![PyPI](https://img.shields.io/pypi/v/newshound) &nbsp;
-![License: MIT](https://img.shields.io/github/license/johnbumgarner/newshound)&nbsp;
+<!-- ![License: MIT](https://img.shields.io/github/license/johnbumgarner/newshound)&nbsp; -->
 ![GitHub issues](https://img.shields.io/github/issues/johnbumgarner/newshound)&nbsp;
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/johnbumgarner/newshound)&nbsp;
 [![newshound](https://snyk.io/advisor/python/newshound/badge.svg)](https://snyk.io/advisor/python/newshound)&nbsp;
@@ -93,8 +93,8 @@ You can also contact me at [John Bumgarner](mailto:newshoundproject@gmail.com?su
    
 If you would like to contribute financially to the development and maintenance of the <i>NewsHound</i> project please read the <a href="https://github.com/johnbumgarner/newshound/blob/master/SPONSOR.md">sponsorship information</a>.
 
-## License
+<!-- ## License
 
 <p align="justify">
 The MIT License (MIT).  Please see <a href="https://github.com/johnbumgarner/newshound/blob/main/LICENSE">License File</a> for more information.
-</p>
+</p> -->
